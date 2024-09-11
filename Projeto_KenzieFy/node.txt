@@ -1,0 +1,32 @@
+primeiro passo, e rodar o comando no terminal.
+npm init -y
+
+segundo passo instalar as dependencia de producao usaremos o express
+npm isntall express
+
+terceiro passo instalar as dependencia de desenvolvimento
+npm install -D ts-node-dev typescript @types/express prisma
+
+quarto passo e instalar o tsc config.
+npx tsc --init
+
+quinto passo e abrir o arquivo tsconfig.json limpar e insetir estas linhas de comando.
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"],
+}
+
+sexto passo inserir o prisma.
+npx prisma init
